@@ -1,1 +1,1 @@
-# PixelWise - eine Web-App zur Erkennung handgeschriebener Ziffern masterEdit
+# PixelWise - eine Web-App zur Erkennung handgeschriebener Ziffern main
