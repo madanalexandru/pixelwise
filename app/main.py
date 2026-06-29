@@ -16,7 +16,8 @@ class ClassifyResponse(BaseModel):
 app = FastAPI()
 
 def verify_api_key(x_api_key: str = Header(...)):
-    if x_api_key != os.getenv("SECRET_API_KEY"):
+    valid_keys = os.getenv("API_KEYS", "").split(",")
+    if x_api_key not in valid_keys:
         raise HTTPException(
             status_code=401, detail="Invalid API key")
 
